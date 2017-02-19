@@ -1,0 +1,123 @@
+body {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;;
+}
+section{
+	display: flex;
+	flex-direction: column;
+	/*align-items: 'center';*/
+}
+.full {
+	height: 100vh;
+	width: 100%;
+	padding: 30px 50px;
+	color: white;
+	text-align: center;
+}
+.global-base-gradient {
+  background: linear-gradient(-180deg, #8C0DE5 14%, #DB00FF 91%);
+}
+.global-primary-gradient {
+  background: rgb(49,70,185);
+  background: linear-gradient(-180deg, #8C0DE5 14%, #DB00FF 91%);
+}
+.global-secondary-gradient {
+  background: rgb(240,55,165);
+  background: linear-gradient(0deg, rgba(212,26,109,0.00) 16%, #7818FF 100%);
+}
+.decoration {
+	display: block;
+  position: absolute; 
+  width: 100%;
+  height: 100vh;
+  bottom: -100%;
+  left: 0%;
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+  z-index: 1
+}
+.jams {
+	/*flex: 1;*/
+	display: flex;
+	flex-flow: row wrap;
+	flex-direction: row;
+	align-self: center;
+	justify-content: center;
+	width: 100%;
+	margin-top: 80px;
+	z-index: 10
+}
+.shadow{
+	box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.7);
+}
+.playlist {
+	position: relative;
+	text-align: center;
+	margin-left: 40px;
+}
+.playlist img {
+	/*width: 230px;*/
+	transition: all 0.35s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.playlist {
+	cursor: pointer;
+}
+.playlist:hover img {
+	-moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.playlist .image-wrap {
+	position: relative;
+	width: 230px;
+	overflow: hidden;position: relative;
+}
+.playlist .image-wrap:after {
+	content: '';
+  padding-top: 100%;
+  display: block;
+}
+.playlist .pl-overlay {
+	position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: rgba(0,0,0 ,0);
+  visibility: hidden;
+  transition: all .2s ease-in-out;
+}
+.playlist .pl-overlay a{
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+	padding: 8px;
+}
+.playlist:hover .pl-overlay {
+	visibility: visible;
+	background: rgba(0,0,0 ,.5);
+}
+
+.overlay {  
+	background:rgba(0,0,0,.75);
+  text-align:center;
+  opacity:0;
+  -webkit-transition: opacity .25s ease;
+	-moz-transition: opacity .25s ease;
+}
+.overlay:hover {
+	opacity: 1
+}
+
+
+
+
